@@ -183,7 +183,7 @@ const PinnedTile = memo(function PinnedTile({ tabId, width }: { tabId: string; w
               }}
             >
               {({ pressed }) =>
-                liquidGlass && !iconRing ? (
+                liquidGlass && !(iconRing && active && tileTheme) ? (
                   <GlassTile tabId={tabId} width={width} active={active} selected={selected} hovered={hovered} pressed={pressed} tileTheme={tileTheme} />
                 ) : active && tileTheme ? (
                   <DockSelection
