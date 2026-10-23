@@ -97,6 +97,11 @@ const ROWS: Record<SettingsPane, Section[]> = {
           keywords: ["auto hide", "compact"],
         },
         showSidebarButton: { title: "Show sidebar button", description: "⌘S and View › Auto-Hide Tabs still hide and show the sidebar.", keywords: ["toggle sidebar"] },
+        pinnedTabIconRing: {
+          title: "Highlight pinned tabs in their icon's colors",
+          description: "The pinned tab you're on gets Dia's ring and tint from its icon, instead of the glass highlight.",
+          keywords: ["dia", "liquid glass", "favicon", "colour", "ring", "tint", "gradient"],
+        },
       },
     },
     {

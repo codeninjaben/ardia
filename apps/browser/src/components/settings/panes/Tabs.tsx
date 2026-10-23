@@ -4,6 +4,7 @@ import { useTheme } from "../../../lib/theme";
 import { useBrowser } from "../../../store/browser";
 import { tabLayoutOf } from "../../../store/model";
 import type { Settings } from "../../../store/settings";
+import { liquidGlass } from "../../glass";
 import { Checkbox, Group, PopUp, Row, SectionHeader, Toggle, useFormColors } from "../controls";
 
 const CLEAN_UP = [
@@ -33,6 +34,7 @@ export function TabsPane() {
       <Group style={{ marginTop: 14 }}>
         {toggle("hideToolbarWhileScrolling", "tabs.hideToolbarWhileScrolling")}
         {!top && toggle("showSidebarButton", "tabs.showSidebarButton")}
+        {liquidGlass && !top && toggle("pinnedTabIconRing", "tabs.pinnedTabIconRing")}
       </Group>
 
       <SectionHeader title="General" />
