@@ -56,6 +56,9 @@ export function SettingsSearchResults({ query }: { query: string }) {
   const selected = useSettingsSearch((s) => s.selected);
   const tabsOnTop = useBrowser((s) => tabLayoutOf(s) === "top");
   const results = settingsResults(query, tabsOnTop);
+  useEffect(() => {
+    useSettingsSearch.setState({ selected: 0 });
+  }, [tabsOnTop]);
   const groups = useMemo(() => {
     const out: { pane: (typeof PANES)[number]; rows: { entry: SettingEntry; index: number }[] }[] = [];
     results.forEach((entry, index) => {
